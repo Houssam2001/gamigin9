@@ -2,12 +2,7 @@
 import Advertisement from '@/components/organism/advertisement/Advertisement'
 import PostOverlayCard from '@/components/molecules/card/PostOverlayCard'
 import PostCard from '@/components/molecules/card/PostCard'
-import PageInfo from '@/components/organism/pageInfo/PageInfo'
 import React from 'react'
-import { GameData } from '../models/Game'
-import { useInfiniteQuery } from '@tanstack/react-query'
-import axios from 'axios'
-import { useInView } from 'framer-motion'
 
 const Populaire = () => {
 
@@ -76,14 +71,15 @@ const Populaire = () => {
             <section className="my-20">
                <>
                   <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                     {gamesData.map((game) => (
+                     {gamesData.map((game,index) => (
                         <div>
                            <PostCard
                            crack_only=''
                               About_the_Game_Title='' Comments_Count='' Image_URL={game.image_url}
                               Magnet_URL=''
+                              key={game.id}
                               Minimum_Requirements='' Post_Details='' Post_URL=''
-                              Recommended_Requirements='' Release_Date='' Torrent_URL='' key=''
+                              Recommended_Requirements='' Release_Date='' Torrent_URL=''
                               Category={'pc Games'} Date='' Developer='' Genre='Adventure,Action,shoots' NFO='' Publisher='' Size='' Title={game.title} id={undefined} />
                         </div>
                      ))}

@@ -24,14 +24,14 @@ const searching = ({ params }: {
       hasPreviousPage,
    } = useInfiniteQuery({
       queryKey: ['games'],
-      queryFn: async ({ pageParam }) => {
+      queryFn: async ({ pageParam }:any) => {
          const res = await axios.get(`https://gamigin-api.vercel.app/api/search/${params.id}/` + pageParam)
          return res.data
       },
 
       initialPageParam: 1,
-      getPreviousPageParam: (firstPage) => firstPage.previousId ?? undefined,
-      getNextPageParam: (lastPage, allPages, lastPageParam, allPageParams) => {
+      getPreviousPageParam: (firstPage:any) => firstPage.previousId ?? undefined,
+      getNextPageParam: (lastPage:any, allPages:any, lastPageParam:any, allPageParams:any) => {
 
          return lastPageParam + 1;
       },
@@ -56,7 +56,7 @@ const searching = ({ params }: {
                ) : (
                   <>
                      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                        {data.pages.map((page) => (
+                        {data.pages.map((page:any) => (
                            <React.Fragment key={page.nextId}>
                               {page.data.map((games: GameData) => (
 

@@ -7,7 +7,6 @@ import React from 'react'
 import { GameData } from '../models/Game'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import { useInView } from 'framer-motion'
 
 const BlogListing = () => {
    const {
@@ -23,13 +22,13 @@ const BlogListing = () => {
       hasPreviousPage,
    } = useInfiniteQuery({
       queryKey: ['games'],
-      queryFn: async ({ pageParam }) => {
+      queryFn: async ({ pageParam }:any) => {
          const res = await axios.get('https://gamigin-api.vercel.app/api/scraped_data/' + pageParam)
          return res.data
       },
       initialPageParam: 1,
-      getPreviousPageParam: (firstPage) => firstPage.previousId ?? undefined,
-      getNextPageParam: (lastPage, allPages, lastPageParam, allPageParams) => {
+      getPreviousPageParam: (firstPage:any) => firstPage.previousId ?? undefined,
+      getNextPageParam: (lastPage:any, allPages: any, lastPageParam: number, allPageParams: any) => {
 
          return lastPageParam + 1;
       },
@@ -58,7 +57,7 @@ const BlogListing = () => {
                   <>
                      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-                        {data.pages.map((page) => (
+                        {data.pages.map((page: { nextId: React.Key | null | undefined; data: GameData[] }) => (
                            <React.Fragment key={page.nextId}>
                               {page.data.map((games: GameData) => (
 

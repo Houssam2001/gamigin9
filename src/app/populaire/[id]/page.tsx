@@ -3,7 +3,6 @@ import { GameData } from '@/app/models/Game'
 import TabbedContent from '@/components/tabs/TabsContents';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import { useRouter } from 'next/router';
 import React, { useState, useEffect } from 'react'
 
 const SinglePost = ({ params }: {
