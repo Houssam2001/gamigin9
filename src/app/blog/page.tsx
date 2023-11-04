@@ -9,8 +9,10 @@ import { useInfiniteQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import Banner from '@/components/ads/Ads'
 import Banner2 from '@/components/ads/Banner2'
+import { useRouter } from 'next/navigation'
 
 const BlogListing = () => {
+   const router =useRouter()
    const {
       status,
       data,
@@ -31,7 +33,6 @@ const BlogListing = () => {
       initialPageParam: 1,
       getPreviousPageParam: (firstPage: any) => firstPage.previousId ?? undefined,
       getNextPageParam: (lastPage: any, allPages: any, lastPageParam: number, allPageParams: any) => {
-
          return lastPageParam + 1;
       },
    })
@@ -82,13 +83,19 @@ const BlogListing = () => {
                )}
                <div className="flex items-center justify-center w-full mt-8">
                   {(
-                     <button
-                        onClick={() => fetchNextPage()}
+                     <a href='https://www.toprevenuegate.com/unkj7tkzs?key=d49eac093c4553e3327c02ad8fdef981' target='_blank'>
+                        <button
+                        onClick={() => {
+
+                           fetchNextPage()
+                        }}
                         disabled={!hasNextPage || isFetchingNextPage}
                         className="btn btn-outline btn-secondary font-work px-5 text-base font-medium"
                      >
                         Load More
                      </button>
+                     </a>
+                     
                   )}
                </div>
             </section>

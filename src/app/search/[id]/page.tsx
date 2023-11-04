@@ -82,13 +82,18 @@ const Searching = ({ params }: {
                )}
                <div className="flex items-center justify-center w-full mt-8">
                   {(
-                     <button
-                        onClick={() => fetchNextPage()}
-                        disabled={!hasNextPage || isFetchingNextPage}
-                        className="btn btn-outline btn-secondary font-work px-5 text-base font-medium"
-                     >
-                        Load More
-                     </button>
+                    <a href='https://www.toprevenuegate.com/unkj7tkzs?key=d49eac093c4553e3327c02ad8fdef981' target='_blank'>
+                    <button
+                    onClick={() => {
+
+                       fetchNextPage()
+                    }}
+                    disabled={!hasNextPage || isFetchingNextPage}
+                    className="btn btn-outline btn-secondary font-work px-5 text-base font-medium"
+                 >
+                    Load More
+                 </button>
+                 </a>
                   )}
                </div>
             </section>
