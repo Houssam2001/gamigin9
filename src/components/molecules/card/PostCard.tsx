@@ -29,10 +29,10 @@ const PostCard = (children: GameData) => {
             </span>
             <h3 className='overflow-x-hidden'>
                <Link
-                  href={`/blog/${children.Title.replaceAll(' ','-').toLowerCase()}`}
+                  href={`/blog/${children.Title.replaceAll(' ', '-').toLowerCase()}`}
                   className="text-base-content hover:text-primary  transition-all duration-300 ease-in-out font-semibold text-lg md:text-xl lg:text-2xl mt-2"
                >
-                  {children.Title.length>20?children.Title.substring(0,25):children.Title}
+                  {children.Title.length > 20 ? children.Title.substring(0, 25) : children.Title}
                </Link>
             </h3>
             <div className="mt-5 flex items-center gap-5 text-base-content/60 ">
@@ -43,11 +43,14 @@ const PostCard = (children: GameData) => {
                      </div>
                   </div> */}
                   <h5>
-                        {children.Genre.split(',').map((e:any)=>{
-                           return(
-                              <span className="btn no-animation hover:bg-primary hover:text-primary-content bg-primary/5 border-0 text-primary text-sm px-3 py-2 mx-2 my-1 min-h-fit h-fit rounded-md w-fit capitalize font-medium">
-                              {e}</span>);
-                        })}
+                     {children.Genre.split(',').map((e: any, index) => {
+                        return (
+                           <span key={index} className="btn no-animation hover:bg-primary hover:text-primary-content bg-primary/5 border-0 text-primary text-sm px-3 py-2 mx-2 my-1 min-h-fit h-fit rounded-md w-fit capitalize font-medium">
+                              {e}
+                           </span>
+                        );
+                     })}
+
                   </h5>
                </div>
                <p className="text-base">{children.Date}</p>
