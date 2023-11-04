@@ -5,6 +5,7 @@ import React from 'react'
 import { GameData } from '../../models/Game'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import axios from 'axios'
+import Banner from '@/components/ads/Ads'
 
 const Searching = ({ params }: {
    params: {
@@ -88,7 +89,8 @@ const Searching = ({ params }: {
 
             {/* Advertisement component */}
             <section className="mb-24">
-               <Advertisement />
+               {/* <Advertisement /> */}
+               <Banner/>
             </section>
          </div>
       </main>

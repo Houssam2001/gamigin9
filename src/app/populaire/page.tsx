@@ -3,6 +3,7 @@ import Advertisement from '@/components/organism/advertisement/Advertisement'
 import PostOverlayCard from '@/components/molecules/card/PostOverlayCard'
 import PostCard from '@/components/molecules/card/PostCard'
 import React from 'react'
+import Banner from '@/components/ads/Ads'
 
 const Populaire = () => {
 
@@ -107,7 +108,9 @@ const Populaire = () => {
 
             {/* Advertisement component */}
             <section className="mb-24">
-               <Advertisement />
+               {/* <Advertisement /> */}
+               <Banner/>
+
             </section>
          </div>
       </main>

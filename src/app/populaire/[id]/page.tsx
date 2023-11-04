@@ -1,5 +1,6 @@
 'use client'
 import { GameData } from '@/app/models/Game'
+import Banner from '@/components/ads/Ads';
 import TabbedContent from '@/components/tabs/TabsContents';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
@@ -117,13 +118,8 @@ const SinglePost = ({ params }: {
                      />
                   </div>
                   <div className="flex items-center justify-center my-8 font-work">
-                     <div className="py-4 bg-base-content/10 text-base-content/60 text-center rounded-xl w-11/12">
-                        <p className="text-sm">Advertisement</p>
-                        <h6 className="text-xl font-semibold leading-[24px]">
-                           You can place ads
-                        </h6>
-                        <p className="text-lg leading-[26px]">750x100</p>
-                     </div>
+                  <Banner/>
+
                   </div>
                   <div className="mb-20">
                      <h5 className="text-2xl leading-7 text-base-content font-semibold mb-4">
