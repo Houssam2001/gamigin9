@@ -12,7 +12,7 @@ import Banner2 from '@/components/ads/Banner2'
 import { useRouter } from 'next/navigation'
 
 const BlogListing = () => {
-   const router =useRouter()
+   const router = useRouter()
    const {
       status,
       data,
@@ -44,12 +44,22 @@ const BlogListing = () => {
             {/* <section>
                <PageInfo />
             </section> */}
+            <div className="flex items-center justify-center my-8 font-work">
+               <Banner />
 
+            </div>
             {/* Banner */}
             <section className="my-12">
                <PostOverlayCard />
             </section>
+            <div className="flex items-center justify-center my-8 font-work">
+               <Banner2 />
 
+            </div>
+            <div className="flex items-center justify-center my-8 font-work">
+               <Banner />
+
+            </div>
             {/* All posts component */}
             <section className="my-20">
                {status === 'pending' ? (
@@ -83,19 +93,19 @@ const BlogListing = () => {
                )}
                <div className="flex items-center justify-center w-full mt-8">
                   {(
-                     <a href='https://www.toprevenuegate.com/unkj7tkzs?key=d49eac093c4553e3327c02ad8fdef981' target='_blank'>
+                     <a href='https://lifeboatlegalalleviate.com/q0uaegvh?key=5a13b3ac7d349450e6d36d9a5a948b89' target='_blank'>
                         <button
-                        onClick={() => {
+                           onClick={() => {
 
-                           fetchNextPage()
-                        }}
-                        disabled={!hasNextPage || isFetchingNextPage}
-                        className="btn btn-outline btn-secondary font-work px-5 text-base font-medium"
-                     >
-                        Load More
-                     </button>
+                              fetchNextPage()
+                           }}
+                           disabled={!hasNextPage || isFetchingNextPage}
+                           className="btn btn-outline btn-secondary font-work px-5 text-base font-medium"
+                        >
+                           Load More
+                        </button>
                      </a>
-                     
+
                   )}
                </div>
             </section>

@@ -4,6 +4,7 @@ import PostOverlayCard from '@/components/molecules/card/PostOverlayCard'
 import PostCard from '@/components/molecules/card/PostCard'
 import React from 'react'
 import Banner from '@/components/ads/Ads'
+import Banner2 from '@/components/ads/Banner2'
 
 const Populaire = () => {
 
@@ -64,10 +65,22 @@ const Populaire = () => {
             </section> */}
 
             {/* Banner */}
+            <div className="flex items-center justify-center my-8 font-work">
+               <Banner />
+
+            </div>
+            {/* Banner */}
             <section className="my-12">
                <PostOverlayCard />
             </section>
+            <div className="flex items-center justify-center my-8 font-work">
+               <Banner2 />
 
+            </div>
+            <div className="flex items-center justify-center my-8 font-work">
+               <Banner />
+
+            </div>
             {/* All posts component */}
             <section className="my-20">
                <>

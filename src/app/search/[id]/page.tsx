@@ -50,6 +50,17 @@ const Searching = ({ params }: {
                <PostOverlayCard />
             </section> */}
             {/* All posts component */}
+            <div className="flex items-center justify-center my-8 font-work">
+               <Banner />
+
+            </div>
+            {/* Banner */}
+           
+            <div className="flex items-center justify-center my-8 font-work">
+               <Banner2 />
+
+            </div>
+           
             <section className="my-20">
                {status === 'pending' ? (
                   <p>Loading...</p>
@@ -82,18 +93,18 @@ const Searching = ({ params }: {
                )}
                <div className="flex items-center justify-center w-full mt-8">
                   {(
-                    <a href='https://www.toprevenuegate.com/unkj7tkzs?key=d49eac093c4553e3327c02ad8fdef981' target='_blank'>
-                    <button
-                    onClick={() => {
+                     <a href='https://lifeboatlegalalleviate.com/q0uaegvh?key=5a13b3ac7d349450e6d36d9a5a948b89' target='_blank'>
+                        <button
+                           onClick={() => {
 
-                       fetchNextPage()
-                    }}
-                    disabled={!hasNextPage || isFetchingNextPage}
-                    className="btn btn-outline btn-secondary font-work px-5 text-base font-medium"
-                 >
-                    Load More
-                 </button>
-                 </a>
+                              fetchNextPage()
+                           }}
+                           disabled={!hasNextPage || isFetchingNextPage}
+                           className="btn btn-outline btn-secondary font-work px-5 text-base font-medium"
+                        >
+                           Load More
+                        </button>
+                     </a>
                   )}
                </div>
             </section>

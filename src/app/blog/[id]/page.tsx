@@ -91,7 +91,10 @@ const SinglePost = ({ params }: {
                      <p className="text-xl leading-8 text-base-content/80">
                         {postData.About_the_Game_Title}
                      </p>
+                     <div className="flex items-center justify-center my-8 font-work">
+                        <Banner2 />
 
+                     </div>
                      <h5 className="text-2xl leading-7 text-base-content font-semibold mt-8 mb-4">
                         Plan Your Itinerary
                      </h5>
