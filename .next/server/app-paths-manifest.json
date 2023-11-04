@@ -1,8 +1,0 @@
-{
-  "/not-found": "app/not-found.js",
-  "/populaire/page": "app/populaire/page.js",
-  "/blog/[id]/page": "app/blog/[id]/page.js",
-  "/search/[id]/page": "app/search/[id]/page.js",
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
-}
