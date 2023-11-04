@@ -5,9 +5,7 @@ import { headerData } from '@/data/headerData'
 import useMode from '@/utils/themeMode'
 import MobileNav from './MobileNav'
 import Image from 'next/image'
-import axios from 'axios'
 import { useRouter } from 'next/navigation'
-import searching from '@/app/search/[id]/page'
 const Header = () => {
    const { theme, setTheme, themes, hydrationError } = useMode()
    const [searchQuery, setSearchQuery] = useState('');
@@ -61,7 +59,6 @@ const Header = () => {
                         <div>
                            <Link
                               href={`/search/${searchQuery.replaceAll(' ', '+')}`}
-                              className=""
                            >
 
                            

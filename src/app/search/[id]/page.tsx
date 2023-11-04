@@ -6,7 +6,7 @@ import { GameData } from '../../models/Game'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import axios from 'axios'
 
-const searching = ({ params }: {
+const Searching = ({ params }: {
    params: {
       id: String
    }
@@ -95,4 +95,4 @@ const searching = ({ params }: {
    )
 }
 
-export default searching
+export default Searching
