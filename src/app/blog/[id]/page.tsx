@@ -1,6 +1,7 @@
 'use client'
 import { GameData } from '@/app/models/Game'
 import Banner from '@/components/ads/Ads';
+import Banner2 from '@/components/ads/Banner2';
 import TabbedContent from '@/components/tabs/TabsContents';
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react'
@@ -136,12 +137,20 @@ const SinglePost = ({ params }: {
                         </>
                      )
                      }
+                      <div className="flex items-center justify-center my-8 font-work">
+                        <Banner2 />
+
+                     </div>
                      {postData.crack_only == '' || postData.crack_only == null ? (
                         <>
 
                         </>
                      ) : (
                         <>
+                         <div className="flex items-center justify-center my-8 font-work">
+                        <Banner />
+
+                     </div>
                            <h5 className="text-2xl leading-7 text-base-content font-semibold mb-4">
                               Game File
                            </h5>
@@ -153,6 +162,10 @@ const SinglePost = ({ params }: {
                               </a>
                            </div>
                         </>)}
+                        <div className="flex items-center justify-center my-8 font-work">
+                        <Banner2 />
+
+                     </div>
 
                      {postData.Magnet_URL == '' || postData.Magnet_URL == null ? (
                         <>

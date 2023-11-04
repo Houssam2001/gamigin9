@@ -1,6 +1,7 @@
 'use client'
 import { GameData } from '@/app/models/Game'
 import Banner from '@/components/ads/Ads';
+import Banner2 from '@/components/ads/Banner2';
 import TabbedContent from '@/components/tabs/TabsContents';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
@@ -57,8 +58,8 @@ const SinglePost = ({ params }: {
                         <div className="avatar">
                            <div className="w-9 rounded-full">
                               <Image
-                              width={100}
-                              height={100}
+                                 width={100}
+                                 height={100}
                                  src="https://placehold.it/100x100"
                                  alt="avatar"
                               />
@@ -99,7 +100,7 @@ const SinglePost = ({ params }: {
                      </h5>
 
                      <TabbedContent
-                     crack_only={postData.crack_only}
+                        crack_only={postData.crack_only}
                         About_the_Game_Title={postData.About_the_Game_Title} Comments_Count={postData.Comments_Count} Image_URL={postData.Image_URL}
                         Magnet_URL={postData.Magnet_URL}
                         Minimum_Requirements={postData.Minimum_Requirements} Post_Details={postData.Post_Details} Post_URL={postData.Post_URL}
@@ -118,7 +119,7 @@ const SinglePost = ({ params }: {
                      />
                   </div>
                   <div className="flex items-center justify-center my-8 font-work">
-                  <Banner/>
+                     <Banner />
 
                   </div>
                   <div className="mb-20">
@@ -128,9 +129,13 @@ const SinglePost = ({ params }: {
                      <div className='flex items-center justify-center my-8'>
 
                         <a className="rounded-lg text-center border-base-content/10 border-4 w-11/12 py-4 duration-300 hover:bg-base-200 text-base-content text-lg"
-                         href={postData.Torrent_URL}>
-                           Games.{postData.Title.replaceAll(' ','-')}.Torrent
+                           href={postData.Torrent_URL}>
+                           Games.{postData.Title.replaceAll(' ', '-')}.Torrent
                         </a>
+                     </div>
+                     <div className="flex items-center justify-center my-8 font-work">
+                        <Banner />
+
                      </div>
                      <h5 className="text-2xl leading-7 text-base-content font-semibold mb-4">
                         Magnet Download
@@ -138,10 +143,15 @@ const SinglePost = ({ params }: {
                      <div className='flex items-center justify-center my-8'>
 
                         <a className="rounded-lg text-center border-base-content/10 border-4 w-11/12 py-4 duration-300 hover:bg-base-200 text-base-content text-lg"
-                         href={postData.Magnet_URL}>
-                           Games.{postData.Title.replaceAll(' ','-')}.Magnet
+                           href={postData.Magnet_URL}>
+                           Games.{postData.Title.replaceAll(' ', '-')}.Magnet
                         </a>
                      </div>
+                     <div className="flex items-center justify-center my-8 font-work">
+                        <Banner2 />
+
+                     </div>
+
                   </div>
                </div>
             </div>

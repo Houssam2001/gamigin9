@@ -6,6 +6,7 @@ import { GameData } from '../../models/Game'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import Banner from '@/components/ads/Ads'
+import Banner2 from '@/components/ads/Banner2'
 
 const Searching = ({ params }: {
    params: {
@@ -25,14 +26,14 @@ const Searching = ({ params }: {
       hasPreviousPage,
    } = useInfiniteQuery({
       queryKey: ['games'],
-      queryFn: async ({ pageParam }:any) => {
+      queryFn: async ({ pageParam }: any) => {
          const res = await axios.get(`https://gamigin-api.vercel.app/api/search/${params.id}/` + pageParam)
          return res.data
       },
 
       initialPageParam: 1,
-      getPreviousPageParam: (firstPage:any) => firstPage.previousId ?? undefined,
-      getNextPageParam: (lastPage:any, allPages:any, lastPageParam:any, allPageParams:any) => {
+      getPreviousPageParam: (firstPage: any) => firstPage.previousId ?? undefined,
+      getNextPageParam: (lastPage: any, allPages: any, lastPageParam: any, allPageParams: any) => {
 
          return lastPageParam + 1;
       },
@@ -57,8 +58,9 @@ const Searching = ({ params }: {
                ) : (
                   <>
                      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                        {data.pages.map((page:any) => (
+                        {data.pages.map((page: any) => (
                            <React.Fragment key={page.nextId}>
+
                               {page.data.map((games: GameData) => (
 
                                  <PostCard
@@ -71,6 +73,10 @@ const Searching = ({ params }: {
                               ))}
                            </React.Fragment>
                         ))}
+                        <div className="flex items-center justify-center my-8 font-work">
+                           <Banner2 />
+
+                        </div>
                      </div>
                   </>
                )}
@@ -90,7 +96,7 @@ const Searching = ({ params }: {
             {/* Advertisement component */}
             <section className="mb-24">
                {/* <Advertisement /> */}
-               <Banner/>
+               <Banner />
             </section>
          </div>
       </main>
