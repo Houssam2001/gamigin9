@@ -5,6 +5,7 @@ import PostCard from '@/components/molecules/card/PostCard'
 import React from 'react'
 import Banner from '@/components/ads/Ads'
 import Banner2 from '@/components/ads/Banner2'
+import Banner3 from '@/components/ads/Banner3'
 
 const Populaire = () => {
 
@@ -78,7 +79,7 @@ const Populaire = () => {
 
             </div>
             <div className="flex items-center justify-center my-8 font-work">
-               <Banner />
+               <Banner3/>
 
             </div>
             {/* All posts component */}

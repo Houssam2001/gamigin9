@@ -10,6 +10,7 @@ import axios from 'axios'
 import Banner from '@/components/ads/Ads'
 import Banner2 from '@/components/ads/Banner2'
 import { useRouter } from 'next/navigation'
+import Banner3 from '@/components/ads/Banner3'
 
 const BlogListing = () => {
    const router = useRouter()
@@ -57,7 +58,7 @@ const BlogListing = () => {
 
             </div>
             <div className="flex items-center justify-center my-8 font-work">
-               <Banner />
+               <Banner3 />
 
             </div>
             {/* All posts component */}
